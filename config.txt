@@ -1,0 +1,133 @@
+=====================================================
+GM MARGIN PREDICTION MODEL CONFIGURATION
+=====================================================
+
+Model Type
+-----------
+XGBoost Regressor
+
+Target Variable
+---------------
+target_actual_gm_pct
+
+Training Records
+----------------
+13,840
+
+Validation Records
+------------------
+3,072
+
+Test Records
+------------
+2,051
+
+Total Dataset
+-------------
+18,963
+
+
+Final Model Hyperparameters
+---------------------------
+
+n_estimators       = 600
+learning_rate      = 0.03
+max_depth          = 5
+subsample          = 0.85
+colsample_bytree   = 0.85
+min_child_weight   = 3
+reg_alpha          = 0.1
+reg_lambda         = 1.5
+
+
+Final Performance
+-----------------
+
+R²   = 0.9528
+RMSE = 0.0146
+MAE  = 0.0107
+
+
+Feature Engineering
+-------------------
+
+Categorical Encoding:
+One Hot Encoding
+
+Unknown Categories:
+Ignored safely during inference
+
+Scaling:
+Not required
+
+Total Raw Features:
+61
+
+Total Engineered Features:
+251
+
+
+Deployment Artifacts
+--------------------
+
+gm_margin_xgb_final.pkl
+
+gm_margin_preprocessor_final.pkl
+
+gm_margin_feature_order.pkl
+
+
+Validation Output
+-----------------
+
+validation_results.xlsx
+
+feature_importance.xlsx
+
+
+Forecasting Output
+------------------
+
+forecast.py
+
+forecast_app.py
+
+
+Streamlit Components
+--------------------
+
+app.py
+
+batch prediction
+
+single prediction
+
+Excel export
+
+mandatory field validation
+
+
+Random Forest Benchmark
+-----------------------
+
+Validation R² = 0.9485
+
+Validation RMSE = 0.0153
+
+Validation MAE = 0.0113
+
+
+Final XGBoost Model
+-------------------
+
+Validation R² = 0.9517
+
+Validation RMSE = 0.0148
+
+Validation MAE = 0.0109
+
+Test R² = 0.9528
+
+Test RMSE = 0.0146
+
+Test MAE = 0.0107
